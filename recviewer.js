@@ -195,7 +195,7 @@ function array_keys(input, search_value, argStrict)
     return tmp_arr;
 }
 
-function () {
+(function() {
   var t = document.body.innerText;
   var json = JSON.parse(t.substring(t.indexOf('{'), t.lastIndexOf('}')+1));
   for (var i=0; i<json.result.length; i++) {
@@ -204,4 +204,4 @@ function () {
   }
   
   document.body.innerHTML = ConvertJsonToTable(json.result) + document.body.innerHTML;
-}();
+}());
