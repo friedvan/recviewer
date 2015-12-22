@@ -195,11 +195,13 @@ function array_keys(input, search_value, argStrict)
     return tmp_arr;
 }
 
-var t = document.body.innerText;
-var json = JSON.parse(t.substring(t.indexOf('{'), t.lastIndexOf('}')+1));
-for (var i=0; i<json.result.length; i++) {
-    json.result[i].pic = '<img width=200 height=200 src=https:' + json.result[i].pic + '>';
-    json.result[i].url = 'https:' + json.result[i].url;
-}
-
-document.body.innerHTML = ConvertJsonToTable(json.result) + document.body.innerHTML;
+function () {
+  var t = document.body.innerText;
+  var json = JSON.parse(t.substring(t.indexOf('{'), t.lastIndexOf('}')+1));
+  for (var i=0; i<json.result.length; i++) {
+      json.result[i].pic = '<img width=200 height=200 src=https:' + json.result[i].pic + '>';
+      json.result[i].url = 'https:' + json.result[i].url;
+  }
+  
+  document.body.innerHTML = ConvertJsonToTable(json.result) + document.body.innerHTML;
+}();
