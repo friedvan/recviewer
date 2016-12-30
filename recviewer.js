@@ -199,7 +199,7 @@ function array_keys(input, search_value, argStrict)
   var t = document.body.innerText;
   var json = JSON.parse(t.substring(t.indexOf('{'), t.lastIndexOf('}')+1));
   for (var i=0; i<json.result.length; i++) {
-    json.result[i].pic = '<a href=' + json.result[i].url + '> <img width=200 height=200 src=https:' + json.result[i].pic + '> </a>';
+    json.result[i].pic = '<a href=' + json.result[i].url + '> <img width=100 height=100 src=https:' + json.result[i].pic + '> </a>';
     json.result[i].url = null;
   }
   
